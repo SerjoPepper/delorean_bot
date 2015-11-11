@@ -1,0 +1,23 @@
+keyboard:
+  add: ':heavy_plus_sign: Добавить'
+  list: ':email: Список - <%=totalCount%>'
+  settings: ':wrench: Настройки'
+  back: ':arrow_left: Назад'
+  locale: ':globe_with_meridians: Язык'
+  timezone: ':watch: Часовой пояс'
+
+answers:
+  added: ':white_check_mark: Уведомление добавлено'
+  success: ':ok_hand: Готово!'
+
+main:
+  time: 'В какое время вам прислать уведомление?'
+  notification: 'О чем вам напомнить?'
+
+settings:
+  main: >
+    Ваши настройки:
+    Язык: <%=settings.lang%>
+    Часовой пояс: <%=settings.timezone%>
+  locale: 'Пожалуйста, выберите ваш язык'
+  timezone: 'Пожалуйста, укажите ваш город или отправьте ваше местоположение, чтобы мы могли определить ваш часовой пояс.'

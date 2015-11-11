@@ -1,0 +1,30 @@
+{
+  "name": "notifications-bot",
+  "version": "0.0.1",
+  "description": "Notifications bot for telegram",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SerjoPepper/notifications-bot.git"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "bot-brother"
+  ],
+  "author": "serjopepper@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SerjoPepper/notifications-bot/issues"
+  },
+  "homepage": "https://github.com/SerjoPepper/notifications-bot#readme",
+  "dependencies": {
+    "bot-brother": "^1.0.18",
+    "chrono-node": "git+https://github.com/SerjoPepper/chrono#master",
+    "lodash": "^3.10.1",
+    "redis": "^2.3.0"
+  }
+}
