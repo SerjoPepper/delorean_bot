@@ -9,7 +9,7 @@ button:
   cancel: ':negative_squared_cross_mark: Отмена'
 
 answer:
-  added: ':white_check_mark: Уведомление добавлено'
+  added: ':white_check_mark: Уведомление добавлено на <%=addedTime%>'
   success: ':ok_hand: Готово!'
 
 main:
