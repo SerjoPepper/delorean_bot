@@ -1,10 +1,12 @@
-keyboard:
+button:
   add: ':heavy_plus_sign: Добавить'
   list: ':email: Список - <%=totalCount%>'
   settings: ':wrench: Настройки'
   back: ':arrow_left: Назад'
   locale: ':globe_with_meridians: Язык'
   timezone: ':watch: Часовой пояс'
+  remove: ':x: Удалить'
+  cancel: ':negative_squared_cross_mark: Отмена'
 
 answers:
   added: ':white_check_mark: Уведомление добавлено'
@@ -12,7 +14,9 @@ answers:
 
 main:
   time: 'В какое время вам прислать уведомление?'
-  notification: 'О чем вам напомнить?'
+  add: '<%=user.first_name%>, о чем вам напомнить?'
+  start: '<%=user.first_name%>, что я могу для вас сделать?'
+  remove: 'Чтобы удалить уведомление, введите его номер.'
 
 settings:
   main: >

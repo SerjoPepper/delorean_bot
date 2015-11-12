@@ -25,6 +25,8 @@
     "bot-brother": "^1.0.18",
     "chrono-node": "git+https://github.com/SerjoPepper/chrono#master",
     "lodash": "^3.10.1",
+    "moment": "^2.10.6",
+    "moment-timezone": "^0.4.1",
     "redis": "^2.3.0",
     "timezoner": "^0.1.9",
     "underscore.string": "^3.2.2"
