@@ -17,7 +17,7 @@ main:
   add: '<%=user.first_name%>, what can I remind you?'
   start: '<%=user.first_name%>, what can I do for you?'
   remove: 'Enter notification number to delete it.'
-  nolist: 'You don't have notifications yet.'
+  nolist: 'You don`t have notifications yet.'
   help: >
     General commands:
     /start - start work
