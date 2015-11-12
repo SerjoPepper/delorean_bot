@@ -1,5 +1,5 @@
 button:
-  add: ':heavy_plus_sign: Добавить'
+  add: ':heavy_plus_sign: Добавить уведомление'
   list: ':email: Список - <%=totalCount%>'
   settings: ':wrench: Настройки'
   back: ':arrow_left: Назад'
@@ -8,15 +8,16 @@ button:
   remove: ':x: Удалить'
   cancel: ':negative_squared_cross_mark: Отмена'
 
-answers:
+answer:
   added: ':white_check_mark: Уведомление добавлено'
   success: ':ok_hand: Готово!'
 
 main:
-  time: 'В какое время вам прислать уведомление?'
+  time: 'Когда вам прислать уведомление?'
   add: '<%=user.first_name%>, о чем вам напомнить?'
   start: '<%=user.first_name%>, что я могу для вас сделать?'
   remove: 'Чтобы удалить уведомление, введите его номер.'
+  nolist: 'У вас пока нет уведомлений.'
 
 settings:
   main: >

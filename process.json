@@ -1,0 +1,13 @@
+{
+  "apps": [{
+    "name": "delorean_bot",
+    "script": "src/index.js",
+    "error_file": "delorean_bot.pm.error.log",
+    "out_file": "delorean_bot.pm.log",
+    "max_restart_memory": "8G",
+    "log_date_format"  : "YYYY-MM-DD HH:mm Z",
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }]
+}
