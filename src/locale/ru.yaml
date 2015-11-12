@@ -11,6 +11,9 @@ button:
 answer:
   added: ':white_check_mark: Уведомление добавлено на <%=addedTime%>'
   success: ':ok_hand: Готово!'
+  incorrecttime: >
+    :confused: Время заданно некорректно.
+    Используйте следующие форматы:
 
 main:
   time: 'Когда вам прислать уведомление?'
