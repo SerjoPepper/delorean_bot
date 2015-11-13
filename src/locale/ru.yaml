@@ -7,13 +7,16 @@ button:
   timezone: ':watch: Часовой пояс'
   remove: ':x: Удалить'
   cancel: ':negative_squared_cross_mark: Отмена'
+  like: ':heart_decoration: Мне нравится этот бот'
+  rate:
+    like: ":point_up: Я уже оценил"
+    later: ":hourglass: Я оценю попозже"
+    dislike: ":hankey: Я не буду оценивать"
 
 answer:
   added: ':white_check_mark: Уведомление добавлено на <%=addedTime%>'
   success: ':ok_hand: Готово!'
-  incorrecttime: >
-    :confused: Время заданно некорректно.
-    Используйте следующие форматы:
+  incorrecttime: ':confused: Время заданно некорректно.'
 
 main:
   time: 'Когда вам прислать уведомление?'
@@ -21,15 +24,33 @@ main:
   start: '<%=user.first_name%>, что я могу для вас сделать?'
   remove: 'Чтобы удалить уведомление, введите его номер.'
   nolist: 'У вас пока нет уведомлений.'
-  help: >
+  rate: |
+    <%=user.first_name%>, если вам понравился наш бот, пожалуйста, поставьте ему :star::star::star::star::star: здесь:
+    https://telegram.me/storebot?start=delorean_bot
+  help: |
     Основные команды:
     /start - начать работу
     /add - добавить уведомление
     /list - список уведомлений
     /settings - настройки
+    /formats - доступные форматы задания даты
+    /rate - оценить бота
+  formats: |
+    Используйте следующие форматы:
+    - завтра
+    - завтра в 12.00
+    - 31.12.15 14:00
+    - послезавтра вечером в 7
+    - через 5 минут
+    - через час
+    - сегодня в 19.00
+    Также можете сразу использовать текст уведомления и врему уведомления:
+    - Купить хлеб сегодня вечером в 7
+    - Выключить духовку через 10 мин
+
 
 settings:
-  main: >
+  main: |
     Ваши настройки:
     Язык: <%=settings.lang%>
     Часовой пояс: <%=settings.timezone%>

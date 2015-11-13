@@ -18,14 +18,14 @@ main:
   start: '<%=user.first_name%>, what can I do for you?'
   remove: 'Enter notification number to delete it.'
   nolist: 'You don`t have notifications yet.'
-  help: >
+  help: |
     General commands:
     /start - start work
     /add - add a notification
     /list - see the notifications list
     /settings - change settings
 settings:
-  main: >
+  main: |
     Your settings:
     Language: <%=settings.lang%>
     Time zone: <%=settings.timezone%>
