@@ -46,12 +46,12 @@ main:
     Also you can set date and time with notification text:
     - Buy some bread today evening at 7
     - Switch off the oven in 10 minutes
-    
-    
+
+
 settings:
   main: |
     Your settings:
-    Language: <%=settings.lang%>
+    Language: :<%=settings.locale%>:
     Time zone: <%=settings.timezone%>
   locale: 'Choose your language, please'
   timezone: 'Please, type your city name or send your location to help us determine your time zone.'
