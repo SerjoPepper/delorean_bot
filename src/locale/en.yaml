@@ -51,7 +51,7 @@ main:
 settings:
   main: |
     Your settings:
-    Language: :<%=settings.locale%>:
+    Language: <%=settings.locale%>
     Time zone: <%=settings.timezone%>
   locale: 'Choose your language, please'
   timezone: 'Please, type your city name or send your location to help us determine your time zone.'
