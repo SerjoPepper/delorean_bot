@@ -1,5 +1,6 @@
 # Delorean telegram bot
 
+[@deloarean_bot](https://telegram.me/delorean_bot) sends you notifications in the future. 
 Requirements: Node.js 0.12+, Redis 2.8+
 
 Install dependencies:
