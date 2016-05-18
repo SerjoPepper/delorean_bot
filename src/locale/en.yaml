@@ -9,9 +9,9 @@ button:
   cancel: ':negative_squared_cross_mark: Cancel'
   like: ':heart_decoration: I like this bot'
   rate:
-    like: ":point_up: I've already rated bot"
-    later: ":hourglass: I'll rate bot later"
-    dislike: ":hankey: I don't want to rate bot"
+    like: ":point_up: I've already rated this bot"
+    later: ":hourglass: I'll rate this bot later"
+    dislike: ":hankey: I don't want to rate this bot"
 
 answer:
   added: ':white_check_mark: The notification is added at <%=addedTime%>'
@@ -23,7 +23,7 @@ main:
   add: '<%=user.first_name%>, what can I remind you?'
   start: '<%=user.first_name%>, what can I do for you?'
   remove: 'Enter notification number to delete it.'
-  nolist: 'You don`t have notifications yet.'
+  nolist: "You don't have any notifications yet."
   rate: |
     <%=user.first_name%>, if you like our bot, please, rate it with :star::star::star::star::star: here:
     https://telegram.me/storebot?start=delorean_bot
@@ -31,19 +31,19 @@ main:
     General commands:
     /start - start work
     /add - add a notification
-    /list - see the notifications list
+    /list - see your notifications list
     /settings - change settings
     /formats - available date and time formats
     /rate - rate bot
   formats: |
-    You can use following formats:
+    You can use the following formats:
     - tomorrow
     - tomorrow at 12.00
     - 31.12.15 14:00
     - in 5 minutes
     - in 1 hour
     - today at 19.00
-    Also you can set date and time with notification text:
+    You can also set date and time together with notification text:
     - Buy some bread today evening at 7
     - Switch off the oven in 10 minutes
 
