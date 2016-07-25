@@ -1,7 +1,7 @@
 var fs = require('fs');
 var yaml = require('js-yaml');
 var config = require('./config');
-var localeDir = config.dir.root + '/src/locale/';
+var localeDir = __dirname + '/locale/';
 
 fs.readdirSync(localeDir).forEach(function (file) {
   var arr = file.split('.')
