@@ -11,7 +11,7 @@ var _ = require('lodash');
 
 var bot = module.exports = bb({
   key: config.bot.key,
-  sessionManager: bb.sessionManager.redis(config.redis)
+  sessionManager: bb.sessionManager.redis(config.redis),
   webHook: config.bot.webHook,
   polling: config.bot.polling
 })
