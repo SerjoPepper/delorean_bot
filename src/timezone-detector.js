@@ -1,6 +1,6 @@
 var _s = require('underscore.string');
 var _ = require('lodash');
-var config = require('config');
+var config = require('./config');
 var cache = require('pcacher')({redis: config.redis});
 var request = require('request');
 var promise = require('bluebird');

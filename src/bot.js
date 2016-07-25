@@ -1,9 +1,9 @@
 var bb = require('bot-brother');
-var config = require('config');
+var config = require('./config');
 var chrono = require('chrono-node');
-var timezoneDetector = require('timezone-detector');
-var redisNotifier = require('redis-notifier');
-var texts = require('texts');
+var timezoneDetector = require('./timezone-detector');
+var redisNotifier = require('./redis-notifier');
+var texts = require('./texts');
 var moment = require('moment');
 var mtz = require('moment-timezone');
 var _s = require('underscore.string');
@@ -11,7 +11,7 @@ var _ = require('lodash');
 
 var bot = module.exports = bb({
   key: config.bot.key,
-  redis: config.redis,
+  sessionManager: bb.sessionManager.redis(config.redis)
   webHook: config.bot.webHook,
   polling: config.bot.polling
 })
@@ -37,9 +37,7 @@ var bot = module.exports = bb({
 .keyboard('backButton', [
   [{
     'button.back': {
-      handler: function (ctx) {
-        return ctx.goBack();
-      },
+      go: '$back',
       isShown: function (ctx) {
         return !ctx.hideBackButton;
       }

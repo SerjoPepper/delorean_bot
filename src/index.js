@@ -1,2 +1,1 @@
-bot = require('bot');
-bot.listenUpdates();
+require('./bot')

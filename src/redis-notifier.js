@@ -1,6 +1,6 @@
 var util = require('util');
 var EventEmitter = require('events');
-var config = require('config');
+var config = require('./config');
 var promise = require('bluebird');
 var db = config.redis.db || 0;
 var prefix = 'exp_notification';
