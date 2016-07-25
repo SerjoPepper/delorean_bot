@@ -15,7 +15,7 @@ npm install -g pm2
 
 Edit config:
 ```sh
-vim src/node_modules/config.index.js
+vim src/config/index.js
 ```
 
 Run bot:
