@@ -10,37 +10,25 @@ var timezoner = require('timezoner');
 promise.promisifyAll(request);
 
 module.exports = function (query) {
-  if (_.isArray(query)) {
-    query = query.join(',');
-  } else if (_.isObject(query)) {
-    query = query.longitude + ',' + query.latitude;
-  }
-  query = _s.trim(query).toLowerCase();
-  return cache.memoize('geocode:' + query, '30d').then(function () {
-    return request.getAsync('https://geocode-maps.yandex.ru/1.x/', {
-      qs: {
-        geocode: query,
-        results: 1,
-        sco: 'longlat',
-        format: 'json',
-        lang: 'en',
-        key: config.yandexMapsKey
-      }
-    }).get('body').then(function (body) {
-      return JSON.parse(body)
-        .response
-        .GeoObjectCollection
-        .featureMember[0]
-        .GeoObject
-        .Point
-        .pos
-        .split(' ')
-        .map(Number);
-    });
+  return promise.try(function () {
+    if (_.isObject(query)) {
+      return [query.latitude, query.longitude];
+    }
+    if (!_.isString(query)){
+      return query;
+    }
+    var key = config.googleMapsKey;
+    var geocodeUrl = 'https://maps.googleapis.com/maps/api/geocode/json?language=en&key=' + key + '&address=' + query;
+    return cacher.memoize(geocodeUrl, '30d', function () {
+      return request.getAsync(geocodeUrl).get('body').then(function (body) {
+        var location = JSON.parse(body).results[0].geometry.location
+        return [location.lat, location.lng]
+      });
+    })
   }).then(function (ll) {
     return cache.memoize('timezone:' + ll.join(','), function () {
       return promise.fromNode(function (cb) {
-        timezoner.getTimeZone(ll[1], ll[0], cb);
+        timezoner.getTimeZone(ll[0], ll[1], cb);
       }).get('timeZoneId');
     });
   });
