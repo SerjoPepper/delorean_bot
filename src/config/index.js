@@ -24,7 +24,7 @@ module.exports = {
     locale: 'ru',
     timezone: 'Europe/Moscow'
   },
-  yandexMapsKey: '<YANDEX_MAPS_KEY>',
+  googleMapsKey: '<GOOGLE_MAPS_KEY>',
 
 };
 
