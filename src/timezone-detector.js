@@ -19,14 +19,14 @@ module.exports = function (query) {
     }
     var key = config.googleMapsKey;
     var geocodeUrl = 'https://maps.googleapis.com/maps/api/geocode/json?language=en&key=' + key + '&address=' + query;
-    return cacher.memoize(geocodeUrl, '30d', function () {
+    return cache.memoize(geocodeUrl, '30d', function () {
       return request.getAsync(geocodeUrl).get('body').then(function (body) {
         var location = JSON.parse(body).results[0].geometry.location
         return [location.lat, location.lng]
       });
     })
   }).then(function (ll) {
-    return cache.memoize('timezone:' + ll.join(','), function () {
+    return cache.memoize('timezone:' + ll.join(','), '30d', function () {
       return promise.fromNode(function (cb) {
         timezoner.getTimeZone(ll[0], ll[1], cb);
       }).get('timeZoneId');
